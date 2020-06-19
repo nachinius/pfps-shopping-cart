@@ -7,6 +7,19 @@ ThisBuild / organizationName := "ProfunKtor"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
+Compile / run / fork := true
+
+fork in run := true
+
+Compile / run / fork := true
+envVars := Map("SC_APP_ENV" -> "test",
+    "SC_JWT_SECRET_KEY"->"asdfasdf",
+    "SC_JWT_CLAIM"->"asdfasdf",
+    "SC_ADMIN_USER_TOKEN"->"asdfasdf",
+    "SC_ACCESS_TOKEN_SECRET_KEY"->"asdfadsf",
+    "SC_PASSWORD_SALT"->"asdfsadf"
+)
+
 lazy val root = (project in file("."))
   .settings(
     name := "shopping-cart"
