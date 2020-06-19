@@ -1,3 +1,14 @@
+# To run a dev env
+
+	docker-compose up
+
+	source env2; sbt
+
+and then inside sbt
+
+	project core; ~reStart
+
+
 shopping-cart
 =============
 
